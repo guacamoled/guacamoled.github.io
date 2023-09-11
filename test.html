@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Make the iframe responsive */
-        iframe {
-            max-width: 100%;
-            height: 500px;
-        }
-
-        /* Optional: Add a max-width for larger screens */
-        @media (min-width: 768px) {
-            iframe {
-                max-width: 800px; /* Adjust the max-width as needed */
-            }
-        }
-    </style>
+    <title>KWR @Guacamoled</title>
 </head>
 <body>
-    <!-- Embed the WordPress blog -->
-    <iframe src="https://kwusaih.wordpress.com/" frameborder="0"></iframe>
+    <div id="content"></div>
+    <script>
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://kwusaih.wordpress.com/bio/', true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById('content').innerHTML = xhr.responseText;
+            }
+        };
+        xhr.send();
+    </script>
 </body>
 </html>
