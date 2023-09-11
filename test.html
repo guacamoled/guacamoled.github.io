@@ -7,7 +7,14 @@
         /* Make the iframe responsive */
         iframe {
             max-width: 100%;
-            height: auto;
+            height: 500px;
+        }
+
+        /* Optional: Add a max-width for larger screens */
+        @media (min-width: 768px) {
+            iframe {
+                max-width: 800px; /* Adjust the max-width as needed */
+            }
         }
     </style>
 </head>
