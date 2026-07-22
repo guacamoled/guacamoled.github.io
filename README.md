@@ -24,7 +24,6 @@ I am a **PhD student in Anthropology** exploring the intersections of anthropolo
 ├── index.html          # Landing page, summary bio, & Gravatar card
 ├── cv.html             # Academic Curriculum Vitae & education timeline
 ├── research.html       # Filterable portfolio of research, thesis, & works
-├── bookmarks.html      # Curated academic directories & resources
 ├── ekfc.html           # Encyclopedia of Korean Folk Culture overview & volume scope
 ├── ekfc-entries.html   # Direct hub to authored encyclopedia entries on WordPress
 └── README.md           # Repository documentation
