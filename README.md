@@ -2,7 +2,7 @@
 
 Welcome! This repository hosts the source code for my personal academic portfolio and website.
 
-👉 **Live Website:** [guacamoled.github.io/kunwryu](https://guacamoled.github.io/kunwryu/)
+👉 **Live Website:** [kunwryu.github.io/kunwryu](https://kunwryu.github.io/)
 
 ---
 
