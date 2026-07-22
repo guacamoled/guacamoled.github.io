@@ -1,4 +1,4 @@
-# Kun Wook Ryu (류건욱, 柳建旭)
+# Kun Wook Ryu
 
 Welcome! This repository hosts the source code for my personal academic portfolio and website.
 
