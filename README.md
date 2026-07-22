@@ -1,8 +1,8 @@
-# Kun Wook Ryu
+# Kun Wook Ryu (류건욱, 柳建旭)
 
 Welcome! This repository hosts the source code for my personal academic portfolio and website.
 
-👉 **Live Website:** [kunwryu.github.io/kunwryu](https://kunwryu.github.io/)
+👉 **Live Website:** [kunwryu.github.io](https://kunwryu.github.io/)
 
 ---
 
@@ -12,6 +12,7 @@ I am a **PhD student in Anthropology** exploring the intersections of anthropolo
 
 * **Primary Blog:** [kunwryu.wordpress.com](https://kunwryu.wordpress.com/)
 * **ResearchGate:** [Kun Wook Ryu](https://www.researchgate.net/profile/Kun-Wook-Ryu)
+* **Academia.edu:** [Kun Wook Ryu](https://aks.academia.edu/KunWookRyu)
 * **Gravatar Profile:** [gravatar.com/kunwryu](https://gravatar.com/kunwryu)
 
 ---
@@ -20,7 +21,7 @@ I am a **PhD student in Anthropology** exploring the intersections of anthropolo
 
 ```text
 .
-├── index.html          # Landing page, bio summary, & Gravatar card
+├── index.html          # Landing page, summary bio, & Gravatar card
 ├── cv.html             # Academic Curriculum Vitae & education timeline
 ├── research.html       # Filterable portfolio of research, thesis, & works
 ├── bookmarks.html      # Curated academic directories & resources
@@ -31,13 +32,14 @@ I am a **PhD student in Anthropology** exploring the intersections of anthropolo
 
 ---
 
-## 🎨 Features & Architecture
+## 🎨 Technical Features & Universal Design (WCAG 2.1 AA)
 
-* **Multi-Page Static SPA:** Fast-loading, zero-dependency HTML files designed for GitHub Pages.
+* **Multi-Page Static SPA:** Fast-loading, zero-dependency HTML5 files designed for GitHub Pages.
 * **Unified Academic Palette:** Styled using CSS variables (#ffffff, #53565a, #009ccf, #b4fdc0, #78d4f7).
-* **Responsive Mobile Navigation:** Hamburger menu overlay for smaller mobile viewports.
+* **Enhanced Colour Contrast:** High-contrast text pairing on mint badge elements (#1a1a1a on #b4fdc0).
+* **Accessible Navigation:** Features a keyboard skip-link (.skip-link), focus-visible focus rings, and dynamic aria-expanded attributes on the mobile menu toggle.
+* **Motion Preferences:** Respects system settings via @media (prefers-reduced-motion: reduce) media queries.
 * **OpenGraph & Twitter Cards:** Configured meta tags for rich social preview links on Bluesky, Threads, and LinkedIn.
-* **Subtle Animations:** CSS keyframe fade-in and smooth scroll behavior.
 
 ---
 
