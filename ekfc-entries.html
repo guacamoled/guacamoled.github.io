@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +29,7 @@
             --bg-color: #ffffff;
             --surface-color: #ffffff;
             --text-main: #53565a;
+            --text-dark: #1a1a1a;
             --accent-color: #009ccf;
             --accent-hover: #007da6;
             --accent-light: #78d4f7;
@@ -48,12 +49,19 @@
         a { color: var(--accent-color); text-decoration: none; transition: color var(--transition-speed) ease; }
         a:hover { color: var(--accent-hover); }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(12px); }
-            to { opacity: 1; transform: translateY(0); }
+        .skip-link { position: absolute; top: -50px; left: 1rem; background: var(--accent-color); color: #ffffff; padding: 0.5rem 1rem; z-index: 2000; font-family: 'Inter', sans-serif; font-weight: 600; border-radius: 4px; transition: top 0.2s ease; }
+        .skip-link:focus { top: 1rem; }
+
+        a:focus-visible, button:focus-visible { outline: 3px solid var(--accent-color); outline-offset: 3px; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-fade-in { animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-fade-in { animation: none !important; }
+            * { transition: none !important; scroll-behavior: auto !important; }
         }
 
-        .animate-fade-in { animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
         .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
         section { padding: 3.5rem 0 2.5rem 0; border-bottom: 1px solid var(--border-color); }
         section:last-of-type { border-bottom: none; }
@@ -118,10 +126,12 @@
 </head>
 <body>
 
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header>
         <div class="container header-content">
             <a href="index.html" class="brand">Kun Wook Ryu</a>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-links" id="nav-links">
@@ -133,7 +143,7 @@
         </div>
     </header>
 
-    <main class="container animate-fade-in">
+    <main class="container animate-fade-in" id="main-content">
         <section>
             <a href="ekfc.html" class="back-nav">&larr; Back to EKFC Overview</a>
             <h1 class="section-title">Authored EKFC Entries</h1>
@@ -163,6 +173,8 @@
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
+            const isExpanded = hamburger.classList.contains('active');
+            hamburger.setAttribute('aria-expanded', isExpanded);
         });
     </script>
 </body>
