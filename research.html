@@ -4,22 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research & Works | Kun Wook Ryu</title>
-    <meta name="description" content="Research publications, theses, and projects by Kun Wook Ryu.">
+    <meta name="description" content="Research publications, theses, and projects by Kun Wook Ryu, PhD Student in Anthropology at the Academy of Korean Studies.">
     
-    <!-- OpenGraph Metadata -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Research & Works | Kun Wook Ryu">
-    <meta property="og:description" content="Research publications, theses, and projects by Kun Wook Ryu.">
+    <meta property="og:description" content="Research publications, theses, and projects by Kun Wook Ryu, PhD Student in Anthropology at the Academy of Korean Studies.">
     <meta property="og:url" content="https://kunwryu.github.io/research.html">
     <meta property="og:image" content="https://0.gravatar.com/userimage/25441211/afb2cb81f42caf7c01caf9787f3b9173?size=1024">
 
-    <!-- Twitter Card Metadata -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Research & Works | Kun Wook Ryu">
-    <meta name="twitter:description" content="Research publications, theses, and projects by Kun Wook Ryu.">
+    <meta name="twitter:description" content="Research publications, theses, and projects by Kun Wook Ryu, PhD Student in Anthropology at the Academy of Korean Studies.">
     <meta name="twitter:image" content="https://0.gravatar.com/userimage/25441211/afb2cb81f42caf7c01caf9787f3b9173?size=1024">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&family=Newsreader:opsz,ital,wght@6..72,0,400;6..72,1,400&display=swap" rel="stylesheet">
@@ -49,13 +46,36 @@
         a { color: var(--accent-color); text-decoration: none; transition: color var(--transition-speed) ease; }
         a:hover { color: var(--accent-hover); }
 
-        .skip-link { position: absolute; top: -50px; left: 1rem; background: var(--accent-color); color: #ffffff; padding: 0.5rem 1rem; z-index: 2000; font-family: 'Inter', sans-serif; font-weight: 600; border-radius: 4px; transition: top 0.2s ease; }
+        /* ACCESSIBILITY: Focus Ring & Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -50px;
+            left: 1rem;
+            background: var(--accent-color);
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            z-index: 2000;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: top 0.2s ease;
+        }
         .skip-link:focus { top: 1rem; }
 
-        a:focus-visible, button:focus-visible { outline: 3px solid var(--accent-color); outline-offset: 3px; }
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid var(--accent-color);
+            outline-offset: 3px;
+        }
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-fade-in { animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        /* --- ANIMATIONS & MOTION --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
 
         @media (prefers-reduced-motion: reduce) {
             .animate-fade-in { animation: none !important; }
@@ -79,6 +99,7 @@
         .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; z-index: 1100; }
         .hamburger span { display: block; width: 24px; height: 2px; background-color: var(--text-main); margin: 5px 0; transition: all var(--transition-speed) ease; }
 
+        /* FILTER BUTTONS */
         .filter-container { display: flex; gap: 0.75rem; margin-bottom: 2rem; flex-wrap: wrap; }
         .filter-btn { background: none; border: 1px solid var(--border-color); padding: 0.5rem 1.1rem; border-radius: 20px; font-family: 'Inter', sans-serif; font-size: 0.875rem; font-weight: 500; color: var(--text-main); cursor: pointer; transition: all var(--transition-speed) ease; }
         .filter-btn.active, .filter-btn:hover { background-color: var(--accent-color); color: #ffffff; border-color: var(--accent-color); }
@@ -130,42 +151,42 @@
     <main class="container animate-fade-in" id="main-content">
         <section>
             <h1 class="section-title">Research & Works</h1>
-            <p class="page-desc">A portfolio of academic publications, doctoral studies, compilation projects, and localisations.</p>
+            <p class="page-desc">A portfolio of academic research, doctoral field studies, curatorial compilation projects, and others.</p>
 
             <div class="filter-container">
                 <button class="filter-btn active" data-filter="all">All Works</button>
                 <button class="filter-btn" data-filter="academic">Academic Papers</button>
                 <button class="filter-btn" data-filter="projects">Projects</button>
-                <button class="filter-btn" data-filter="localisations">Localisations</button>
+                <button class="filter-btn" data-filter="others">Others</button>
             </div>
 
             <div class="grid">
                 
                 <div class="card" data-category="academic">
                     <div>
+                        <span class="card-tag">Doctoral Ethnography</span>
+                        <h3>Architectural Informatisation & Pre-Construction</h3>
+                        <p>Investigating how CAD, BIM, and generative AI tools re-order professional expertise, embodied skill, and social hierarchy within Korean architectural design offices.</p>
+                    </div>
+                    <span class="btn-link" style="color: var(--text-main); opacity: 0.7;">Ongoing Doctoral Research</span>
+                </div>
+
+                <div class="card" data-category="academic">
+                    <div>
                         <span class="card-tag">Master's Thesis</span>
                         <h3>Adaptation Strategies of Webtoon Artists in the Digital Content Industry</h3>
-                        <p>Examining the interaction between the digital content industry, webtoon platforms, and artists in South Korea. Written in Korean.</p>
+                        <p>Examining the structural interactions between digital content platforms, algorithmic demands, and webtoon artists in South Korea. Written in Korean.</p>
                     </div>
                     <a href="https://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=23d5f1275d0867cfffe0bdc3ef48d419" target="_blank" class="btn-link">Read Abstract &rarr;</a>
                 </div>
 
                 <div class="card" data-category="projects">
                     <div>
-                        <span class="card-tag">Compilation & Project</span>
+                        <span class="card-tag">Curatorial Project</span>
                         <h3>Encyclopedia of Korean Folk Culture</h3>
-                        <p>Contributed to compilation, research structuring, and cultural context curation for folk culture heritage documentations.</p>
+                        <p>Contributed to compilation, research structuring, translation, and cultural context curation for multi-volume folk culture heritage documentations.</p>
                     </div>
                     <a href="ekfc.html" class="btn-link">View Project &rarr;</a>
-                </div>
-
-                <div class="card" data-category="academic">
-                    <div>
-                        <span class="card-tag">Doctoral Work</span>
-                        <h3>Spatial Dynamics & Built Environments</h3>
-                        <p>Ongoing anthropological inquiry into human experience, physical architectures, and landscape heritage interpretation.</p>
-                    </div>
-                    <span class="btn-link" style="color: var(--text-main); opacity: 0.7;">In Progress</span>
                 </div>
 
             </div>
