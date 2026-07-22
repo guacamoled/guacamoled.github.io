@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks | Kun Wook Ryu</title>
+    <meta name="description" content="Curated academic resources, tools, and reading lists by Kun Wook Ryu.">
+    
+    <!-- OpenGraph Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bookmarks | Kun Wook Ryu">
+    <meta property="og:description" content="Curated academic resources, tools, and reading lists by Kun Wook Ryu.">
+    <meta property="og:url" content="https://kunwryu.github.io/bookmarks.html">
+    <meta property="og:image" content="https://0.gravatar.com/userimage/25441211/afb2cb81f42caf7c01caf9787f3b9173?size=1024">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bookmarks | Kun Wook Ryu">
+    <meta name="twitter:description" content="Curated academic resources, tools, and reading lists by Kun Wook Ryu.">
+    <meta name="twitter:image" content="https://0.gravatar.com/userimage/25441211/afb2cb81f42caf7c01caf9787f3b9173?size=1024">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&family=Newsreader:opsz,ital,wght@6..72,0,400;6..72,1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --surface-color: #ffffff;
+            --text-main: #53565a;
+            --accent-color: #009ccf;
+            --accent-hover: #007da6;
+            --accent-light: #78d4f7;
+            --accent-mint: #b4fdc0;
+            --border-color: #e2e4e6;
+            --card-shadow: 0 4px 20px rgba(83, 86, 90, 0.08);
+            --transition-speed: 0.3s;
+            --max-width: 960px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+        h1, h2, h3, .brand { font-family: 'Cinzel', serif; color: var(--text-main); font-weight: 700; }
+        p, li { font-family: 'Newsreader', serif; font-size: 1.125rem; color: var(--text-main); }
+        a { color: var(--accent-color); text-decoration: none; transition: color var(--transition-speed) ease; }
+        a:hover { color: var(--accent-hover); }
+
+        /* --- ANIMATIONS --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+        section { padding: 3.5rem 0 2.5rem 0; border-bottom: 1px solid var(--border-color); }
+        section:last-of-type { border-bottom: none; }
+
+        .section-title { font-size: 2rem; margin-bottom: 0.5rem; }
+        .page-desc { font-family: 'Inter', sans-serif; font-size: 1.05rem; color: var(--text-main); opacity: 0.85; margin-bottom: 2rem; }
+
+        header { position: sticky; top: 0; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .brand { font-size: 1.35rem; letter-spacing: 0.5px; color: var(--text-main); }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--text-main); }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
+
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; z-index: 1100; }
+        .hamburger span { display: block; width: 24px; height: 2px; background-color: var(--text-main); margin: 5px 0; transition: all var(--transition-speed) ease; }
+
+        .bookmark-group { margin-bottom: 2.5rem; }
+        .bookmark-group h2 { font-size: 1.4rem; margin-bottom: 1rem; border-bottom: 2px solid var(--accent-mint); display: inline-block; padding-bottom: 0.2rem; }
+        
+        .bookmark-list { list-style: none; }
+        .bookmark-item { background-color: var(--surface-color); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.25rem; margin-bottom: 0.85rem; box-shadow: var(--card-shadow); transition: transform var(--transition-speed) ease, border-color var(--transition-speed) ease; }
+        .bookmark-item:hover { transform: translateX(4px); border-color: var(--accent-light); }
+        .bookmark-item h3 { font-size: 1.15rem; margin-bottom: 0.25rem; }
+        .bookmark-item p { font-size: 0.95rem; opacity: 0.85; }
+
+        footer { padding: 3rem 0; text-align: center; border-top: 1px solid var(--border-color); background-color: var(--bg-color); }
+        footer p { font-family: 'Inter', sans-serif; font-size: 0.875rem; opacity: 0.8; }
+
+        @media (max-width: 768px) {
+            .hamburger { display: block; }
+            .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+            .hamburger.active span:nth-child(2) { opacity: 0; }
+            .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+            .nav-links { position: fixed; top: 70px; right: -100%; width: 100%; height: calc(100vh - 70px); background-color: var(--bg-color); flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; transition: right var(--transition-speed) ease; border-top: 1px solid var(--border-color); }
+            .nav-links.active { right: 0; }
+            .nav-links a { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="brand">Kun Wook Ryu</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="cv.html" class="nav-item">CV</a></li>
+                <li><a href="research.html" class="nav-item">Research & Works</a></li>
+                <li><a href="bookmarks.html" class="nav-item active">Bookmarks</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container animate-fade-in">
+        <section>
+            <h1 class="section-title">Bookmarks & Directories</h1>
+            <p class="page-desc">A personal directory of academic hubs, cultural heritage archives, and digital media projects.</p>
+
+            <div class="bookmark-group">
+                <h2>Academic Profiles & Repositories</h2>
+                <ul class="bookmark-list">
+                    <li class="bookmark-item">
+                        <h3><a href="https://www.researchgate.net/profile/Kun-Wook-Ryu" target="_blank">ResearchGate Profile &rarr;</a></h3>
+                        <p>Academic publications, master's thesis metadata, and research outputs.</p>
+                    </li>
+                    <li class="bookmark-item">
+                        <h3><a href="https://gravatar.com/kunwryu" target="_blank">Gravatar Profile Hub &rarr;</a></h3>
+                        <p>Central identity page and social link verification directory.</p>
+                    </li>
+                    <li class="bookmark-item">
+                        <h3><a href="https://kunwryu.wordpress.com/" target="_blank">Personal Blog (kunwryu.wordpress.com) &rarr;</a></h3>
+                        <p>Essays, field notes, and reflections on anthropology, media, and life log archives.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bookmark-group">
+                <h2>Cultural Heritage & Projects</h2>
+                <ul class="bookmark-list">
+                    <li class="bookmark-item">
+                        <h3><a href="https://kunwryu.wordpress.com/portfolio/ekfc/" target="_blank">Encyclopedia of Korean Folk Culture (EKFC) &rarr;</a></h3>
+                        <p>Comprehensive compendium and digital archiving project on Korean seasonal customs, folk beliefs, and traditional literature.</p>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Kun Wook Ryu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

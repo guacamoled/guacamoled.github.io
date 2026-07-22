@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kun Wook Ryu | Anthropology PhD Student</title>
+    <meta name="description" content="Academic portfolio and personal website of Kun Wook Ryu, PhD Student in Anthropology.">
+    
+    <!-- OpenGraph Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kun Wook Ryu | Anthropology PhD Student">
+    <meta property="og:description" content="Academic portfolio and personal website of Kun Wook Ryu, PhD Student in Anthropology.">
+    <meta property="og:url" content="https://kunwryu.github.io/index.html">
+    <meta property="og:image" content="https://0.gravatar.com/userimage/25441211/afb2cb81f42caf7c01caf9787f3b9173?size=1024">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kun Wook Ryu | Anthropology PhD Student">
+    <meta name="twitter:description" content="Academic portfolio and personal website of Kun Wook Ryu, PhD Student in Anthropology.">
+    <meta name="twitter:image" content="https://0.gravatar.com/userimage/25441211/afb2cb81f42caf7c01caf9787f3b9173?size=1024">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600&family=Newsreader:opsz,ital,wght@6..72,0,400;6..72,1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --surface-color: #ffffff;
+            --text-main: #53565a;
+            --accent-color: #009ccf;
+            --accent-hover: #007da6;
+            --accent-light: #78d4f7;
+            --accent-mint: #b4fdc0;
+            --border-color: #e2e4e6;
+            --card-shadow: 0 4px 20px rgba(83, 86, 90, 0.08);
+            --transition-speed: 0.3s;
+            --max-width: 960px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-main); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+        h1, h2, h3, .brand { font-family: 'Cinzel', serif; color: var(--text-main); font-weight: 700; }
+        p, li { font-family: 'Newsreader', serif; font-size: 1.125rem; color: var(--text-main); }
+        a { color: var(--accent-color); text-decoration: none; transition: color var(--transition-speed) ease; }
+        a:hover { color: var(--accent-hover); }
+
+        /* --- ANIMATIONS --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+        section { padding: 4rem 0 3rem 0; border-bottom: 1px solid var(--border-color); }
+        section:last-of-type { border-bottom: none; }
+
+        .section-title { font-size: 2rem; margin-bottom: 1.5rem; position: relative; display: inline-block; }
+        .section-title::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 40px; height: 3px; background-color: var(--accent-color); border-radius: 2px; }
+
+        header { position: sticky; top: 0; background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); z-index: 1000; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .brand { font-size: 1.35rem; letter-spacing: 0.5px; color: var(--text-main); }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 500; color: var(--text-main); }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-color); }
+
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; z-index: 1100; }
+        .hamburger span { display: block; width: 24px; height: 2px; background-color: var(--text-main); margin: 5px 0; transition: all var(--transition-speed) ease; }
+
+        .hero { padding: 4rem 0 3rem 0; }
+        .hero-layout { display: grid; grid-template-columns: 1fr 340px; gap: 3rem; align-items: start; }
+        .hero h1 { font-size: 2.5rem; line-height: 1.2; margin-bottom: 0.5rem; }
+        .hero-subtitle { font-family: 'Inter', sans-serif; font-size: 1.15rem; font-weight: 600; color: var(--accent-color); margin-bottom: 1.5rem; letter-spacing: 0.2px; }
+        .hero-description { font-size: 1.2rem; color: var(--text-main); margin-bottom: 2rem; }
+
+        .social-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+        .social-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.1rem; background-color: var(--surface-color); border: 1px solid var(--border-color); border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500; color: var(--text-main); box-shadow: 0 2px 8px rgba(0,0,0,0.02); transition: all var(--transition-speed) ease; }
+        .social-badge:hover { border-color: var(--accent-color); color: var(--accent-color); background-color: rgba(120, 212, 247, 0.1); transform: translateY(-2px); box-shadow: var(--card-shadow); }
+
+        .gravatar-hovercard { width: 100%; max-width: 340px; }
+        .gravatar-hovercard__inner { background-color: var(--surface-color); border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; box-shadow: var(--card-shadow); transition: box-shadow var(--transition-speed) ease, border-color var(--transition-speed) ease; }
+        .gravatar-hovercard__inner:hover { border-color: var(--accent-light); box-shadow: 0 8px 30px rgba(0, 156, 207, 0.12); }
+        .gravatar-hovercard__header-image { height: 120px; width: 100%; background-position: center; background-size: cover !important; background-repeat: no-repeat; }
+        .gravatar-hovercard__header { padding: 0 1.5rem 1rem 1.5rem; position: relative; margin-top: -50px; }
+        .gravatar-hovercard__avatar-link { display: inline-block; margin-bottom: 0.5rem; }
+        .gravatar-hovercard__avatar { border-radius: 50%; border: 4px solid var(--surface-color); box-shadow: 0 2px 8px rgba(83, 86, 90, 0.2); background-color: var(--surface-color); display: block; }
+        .gravatar-hovercard__name { font-family: 'Cinzel', serif; font-size: 1.25rem; font-weight: 700; color: var(--text-main); line-height: 1.3; }
+        .gravatar-hovercard__location { font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--text-main); opacity: 0.8; margin-top: 0.15rem; }
+        .gravatar-hovercard__body { padding: 0 1.5rem 1rem 1.5rem; }
+        .gravatar-hovercard__description { font-family: 'Newsreader', serif; font-size: 1rem; color: var(--text-main); line-height: 1.5; white-space: pre-line; }
+        .gravatar-hovercard__social-links { display: flex; gap: 0.75rem; padding: 0 1.5rem 1rem 1.5rem; align-items: center; }
+        .gravatar-hovercard__social-link { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background-color: var(--bg-color); border: 1px solid var(--border-color); transition: transform var(--transition-speed) ease, border-color var(--transition-speed) ease; }
+        .gravatar-hovercard__social-link:hover { transform: translateY(-2px); border-color: var(--accent-color); background-color: rgba(180, 253, 192, 0.3); }
+        .gravatar-hovercard__social-icon { width: 20px; height: 20px; display: block; }
+        .gravatar-hovercard__footer { display: flex; justify-content: space-between; align-items: center; padding: 0.85rem 1.5rem; background-color: rgba(120, 212, 247, 0.08); border-top: 1px solid var(--border-color); font-family: 'Inter', sans-serif; font-size: 0.8rem; }
+        .gravatar-hovercard__profile-url { color: var(--text-main); opacity: 0.8; }
+        .gravatar-hovercard__profile-link { font-weight: 600; color: var(--accent-color); }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .card { background-color: var(--surface-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.75rem; box-shadow: var(--card-shadow); transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, border-color var(--transition-speed) ease; display: flex; flex-direction: column; justify-content: space-between; }
+        .card:hover { transform: translateY(-4px); border-color: var(--accent-light); box-shadow: 0 8px 25px rgba(0, 156, 207, 0.12); }
+        .card-tag { font-family: 'Inter', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; background-color: var(--accent-mint); color: var(--text-main); padding: 0.2rem 0.6rem; border-radius: 4px; font-weight: 600; display: inline-block; margin-bottom: 0.75rem; }
+        .card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; line-height: 1.3; }
+        .card p { font-size: 1rem; color: var(--text-main); margin-bottom: 1.25rem; }
+
+        .btn-link { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--accent-color); margin-top: 1rem; }
+        .btn-link:hover { color: var(--accent-hover); }
+
+        .contact-box { background-color: var(--surface-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 2rem; margin-top: 1rem; box-shadow: var(--card-shadow); }
+
+        footer { padding: 3rem 0; text-align: center; border-top: 1px solid var(--border-color); background-color: var(--bg-color); }
+        footer p { font-family: 'Inter', sans-serif; font-size: 0.875rem; color: var(--text-main); opacity: 0.8; }
+
+        @media (max-width: 860px) {
+            .hero-layout { grid-template-columns: 1fr; }
+            .gravatar-hovercard { max-width: 100%; margin-top: 1rem; }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger { display: block; }
+            .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+            .hamburger.active span:nth-child(2) { opacity: 0; }
+            .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+            .nav-links { position: fixed; top: 70px; right: -100%; width: 100%; height: calc(100vh - 70px); background-color: var(--bg-color); flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; transition: right var(--transition-speed) ease; border-top: 1px solid var(--border-color); }
+            .nav-links.active { right: 0; }
+            .nav-links a { font-size: 1.25rem; }
+            .hero h1 { font-size: 2.15rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="brand">Kun Wook Ryu</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-item active">Home</a></li>
+                <li><a href="cv.html" class="nav-item">CV</a></li>
+                <li><a href="research.html" class="nav-item">Research & Works</a></li>
+                <li><a href="bookmarks.html" class="nav-item">Bookmarks</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container animate-fade-in">
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-layout">
+                <div>
+                    <h1>Kun Wook Ryu</h1>
+                    <div class="hero-subtitle">류건욱 | 柳 建旭<br>PhD Student in Anthropology</div>
+                    <p class="hero-description">
+                        Exploring the intersections of anthropology, built environments, cultural landscapes, and heritage interpretation.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/kunwryu/" target="_blank" rel="noopener" class="social-badge">
+                            <span></span> Instagram
+                        </a>
+                        <a href="https://www.threads.com/@kunwryu" target="_blank" rel="noopener" class="social-badge">
+                            <span>➰</span> Threads
+                        </a>
+                        <a href="https://bsky.app/profile/kunwryu.bsky.social" target="_blank" rel="noopener" class="social-badge">
+                            <span>🦋</span> Bluesky
+                        </a>
+                    </div>
+                </div>
+
+                <!-- GRAVATAR CARD -->
+                <div class="gravatar-hovercard">
+                    <div class="gravatar-hovercard__inner">
+                        <div class="gravatar-hovercard__header-image" style="background: url('https://0.gravatar.com/userimage/25441211/afb2cb81f42caf7c01caf9787f3b9173?size=1024') 50% 50% / 100% no-repeat;"></div>
+                        <div class="gravatar-hovercard__header">
+                            <a class="gravatar-hovercard__avatar-link" href="https://gravatar.com/kunwryu?utm_source=hovercard" target="_blank">
+                                <img class="gravatar-hovercard__avatar" src="https://0.gravatar.com/avatar/c9184cc3776b6d01a7104b74bf407a1f04f10f45517bd6bef957189ac9d3dbf8?s=256&amp;d=initials" width="104" height="104" alt="Kun Wook Ryu">
+                            </a>
+                            <a class="gravatar-hovercard__personal-info-link" href="https://gravatar.com/kunwryu?utm_source=hovercard" target="_blank">
+                                <h4 class="gravatar-hovercard__name">Kun Wook Ryu</h4>
+                                <p class="gravatar-hovercard__location">South Korea</p>
+                            </a>
+                        </div>
+                        <div class="gravatar-hovercard__body">
+                            <p class="gravatar-hovercard__description">PhD student | MA in Sociocultural Anthropology
+🎏 Header image by Hawan Ryu</p>
+                        </div>
+                        <div class="gravatar-hovercard__social-links">
+                            <a class="gravatar-hovercard__social-link" href="https://gravatar.com/kunwryu?utm_source=hovercard" target="_blank" data-service-name="gravatar" title="Gravatar Profile">
+                                <img class="gravatar-hovercard__social-icon" src="https://s.gravatar.com/icons/gravatar.svg" width="32" height="32" alt="Gravatar">
+                            </a>
+                            <a class="gravatar-hovercard__social-link" href="https://www.linkedin.com/in/kun-wook-ryu-87a21a189" target="_blank" data-service-name="linkedin" title="LinkedIn Profile">
+                                <img class="gravatar-hovercard__social-icon" src="https://s.gravatar.com/icons/linkedin.svg" width="32" height="32" alt="LinkedIn">
+                            </a>
+                        </div>
+                        <div class="gravatar-hovercard__footer">
+                            <a class="gravatar-hovercard__profile-url" title="https://gravatar.com/kunwryu" href="https://gravatar.com/kunwryu?utm_source=profile-card" target="_blank">
+                                gravatar.com/kunwryu
+                            </a>
+                            <a class="gravatar-hovercard__profile-link" href="https://gravatar.com/kunwryu?utm_source=profile-card" target="_blank">
+                                View profile →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BIOGRAPHY SUMMARY -->
+        <section>
+            <h2 class="section-title">Biography</h2>
+            <p>
+                I am a PhD student in Anthropology investigating how societies construct, experience, and preserve physical and symbolic spaces. My research focuses on built environments, spatial social dynamics, and the nuances of cultural landscape interpretation.
+            </p>
+            <p style="margin-top: 1rem;">
+                Through anthropological inquiry, I examine how historical legacies and contemporary practices shape human interactions with built structures and heritage narratives.
+            </p>
+            <a href="cv.html" class="btn-link">View Full Academic CV &rarr;</a>
+        </section>
+
+        <!-- FEATURED WORKS -->
+        <section>
+            <h2 class="section-title">Featured Works</h2>
+            <div class="grid">
+                <div class="card">
+                    <div>
+                        <span class="card-tag">Thesis</span>
+                        <h3>Adaptation Strategies of Webtoon Artists in the Digital Content Industry</h3>
+                        <p>Examining the interaction between the digital content industry, webtoon platforms, and artists in South Korea.</p>
+                    </div>
+                    <a href="https://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=23d5f1275d0867cfffe0bdc3ef48d419" target="_blank" class="btn-link">Read Abstract &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <span class="card-tag">Project</span>
+                        <h3>Encyclopedia of Korean Folk Culture</h3>
+                        <p>Contributed to compilation, research structuring, and cultural context curation for folk culture heritage documentations.</p>
+                    </div>
+                    <a href="https://kunwryu.wordpress.com/portfolio/ekfc/" target="_blank" class="btn-link">View Project &rarr;</a>
+                </div>
+            </div>
+            <div style="margin-top: 1.5rem;">
+                <a href="research.html" class="btn-link">Explore All Research & Works &rarr;</a>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section>
+            <h2 class="section-title">Contact</h2>
+            <p>I am open to academic discussions, research collaborations, or inquiries regarding my projects.</p>
+            <div class="contact-box">
+                <p><strong>Email:</strong> kunwryu(at)gmail.com</p>
+                <p style="margin-top: 0.5rem;"><strong>Academic Profiles:</strong> <a href="https://aks.academia.edu/KunWookRyu" target="_blank" rel="noopener">Academic.edu</a>, <a href="https://www.researchgate.net/profile/Kun-Wook-Ryu" target="_blank" rel="noopener">ResearchGate</a></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Kun Wook Ryu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
